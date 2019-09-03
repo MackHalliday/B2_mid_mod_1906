@@ -1,0 +1,14 @@
+
+  <h1>All Books</h1>
+<section class="grid-container">
+  <% @books.each do |book| %>
+    <section class = "grid-item" id= 'book-<%=book.id%>'>
+      <h2> <%= book.title %> </h2>
+      <p> <%= book.pages %> <p>
+      <p> <%= book.publication_year %> <p>
+      <% book.authors.each do |author| %>
+      <p> <%=link_to author.name, "/authors/#{author.id}" %> <p>
+          <% end %>
+    </section>
+    <% end %>
+</section>

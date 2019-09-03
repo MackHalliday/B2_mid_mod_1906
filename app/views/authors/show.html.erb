@@ -1,0 +1,6 @@
+<h1><%= @author.name %></h1>
+
+<% @author.books.each do |book| %>
+    <p> <%= book.title %> <p>
+<% end %>
+<p> <%= @author.books.average_length %> <p>
